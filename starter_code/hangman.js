@@ -11,13 +11,13 @@ Hangman.prototype.getWord = function () {
 };
 
 Hangman.prototype.checkIfLetter = function (keyCode) {
-	if (/^[a-z]+$/i.test(keyCode)) { return true; } 
+	if(/^[a-z]+$/i.test(keyCode)) { return true; } 
 		else { return false; };
 };
 
 Hangman.prototype.checkClickedLetters = function (key) {
-	this.letters.forEach(function(key) {
-		
+	if(this.letters.indexOf(key === -1)) { return true; }
+			else { return false; }
 	});
 };
 
