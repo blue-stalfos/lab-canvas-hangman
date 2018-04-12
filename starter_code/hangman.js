@@ -22,7 +22,7 @@ Hangman.prototype.checkClickedLetters = function (key) {
 };
 
 Hangman.prototype.addCorrectLetter = function (key) {
-	this.guessedLetter += key;
+	this.guessedLetter  += key;
 };
 
 // Hangman.prototype.addWrongLetter = function (letter) {
