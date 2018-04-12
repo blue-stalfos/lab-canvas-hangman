@@ -1,20 +1,25 @@
 var hangman;
 
-// function Hangman() {
+function Hangman() {
+	this.words = ['purple', 'apple', 'Ironhack', 'word', 'encapsulation', 'deoxyribonucleic']
+	this.secretWord = '' + this.getWord;
+	this.letters = [];
+};
 
-// }
+Hangman.prototype.getWord = function () {
+	return this.words[(Math.round(Math.random() * this.words.length))];
+};
 
-// Hangman.prototype.getWord = function () {
+Hangman.prototype.checkIfLetter = function (keyCode) {
+	if (/^[a-z]+$/i.test(keyCode)) { return true; } 
+		else { return false; };
+};
 
-// };
-
-// Hangman.prototype.checkIfLetter = function (keyCode) {
-
-// };
-
-// Hangman.prototype.checkClickedLetters = function (key) {
-
-// };
+Hangman.prototype.checkClickedLetters = function (key) {
+	this.letters.forEach(function(key) {
+		
+	});
+};
 
 // Hangman.prototype.addCorrectLetter = function (i) {
 
@@ -33,7 +38,7 @@ var hangman;
 // };
 
 document.getElementById('start-game-button').onclick = function () {
-  hangman = new Hangman();
+	hangman = new Hangman();
 };
 
 

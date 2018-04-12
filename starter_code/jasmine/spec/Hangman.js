@@ -46,11 +46,11 @@ describe('Hangman Game', function () {
     });
 
     it('checkIfLetter should return false', function () {
-      expect(hangman.checkIfLetter(43)).toEqual(false);
+      expect(hangman.checkIfLetter('\\')).toEqual(false);
     });
 
     it('checkIfLetter should return true', function () {
-      expect(hangman.checkIfLetter(76)).toEqual(true);
+      expect(hangman.checkIfLetter('l')).toEqual(true);
     });
   });
 
