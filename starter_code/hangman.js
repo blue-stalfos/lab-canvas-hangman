@@ -4,6 +4,7 @@ function Hangman() {
 	this.words = ['purple', 'apple', 'Ironhack', 'word', 'encapsulation', 'deoxyribonucleic']
 	this.secretWord = '' + this.getWord;
 	this.letters = [];
+	this.guessedLetter = '';
 };
 
 Hangman.prototype.getWord = function () {
@@ -16,14 +17,13 @@ Hangman.prototype.checkIfLetter = function (keyCode) {
 };
 
 Hangman.prototype.checkClickedLetters = function (key) {
-	if(this.letters.indexOf(key === -1)) { return true; }
-			else { return false; }
-	});
+		if (this.letters.includes(key)) { return false; }
+			else { return true; }
 };
 
-// Hangman.prototype.addCorrectLetter = function (i) {
-
-// };
+Hangman.prototype.addCorrectLetter = function (key) {
+	this.guessedLetter += key;
+};
 
 // Hangman.prototype.addWrongLetter = function (letter) {
 
